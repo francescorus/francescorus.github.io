@@ -243,8 +243,8 @@ footer {
   /* Nascondi i controlli del video e disabilita l'interazione */
     .media-wrapper video {
       pointer-events: none; /* Disabilita l'interazione con il video */
-      user-select: none; /* Disabilita la selezione del video */
-      touch-action: none; /* Disabilita l'azione touch sul video */
+      /*user-select: none;  Disabilita la selezione del video */
+      /*touch-action: none;  Disabilita l'azione touch sul video */
       border-radius: 5px;
     }
 
