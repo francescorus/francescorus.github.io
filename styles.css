@@ -1,4 +1,4 @@
-
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +8,8 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f0f0f0;
-  color: #333;
+  background-image: linear-gradient(to right bottom, #ff6f61, #e25e58, #d64d50, #c93c49, #bb2c40);
+  color: #fff;
 }
 
 .container {
@@ -22,7 +22,6 @@ body {
 h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #ff6f61; /* Rosso chiaro */
 }
 
 p {
@@ -34,15 +33,16 @@ p {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 20px;
-  background-color: #ff6f61; /* Rosso chiaro */
-  color: #fff;
+  background-color: #fff;
+  color: #ff6f61;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #e25e58; /* Rosso scuro al passaggio del mouse */
+  background-color: #e25e58;
+  color: #fff;
 }
 
 /* Stili per il footer */
