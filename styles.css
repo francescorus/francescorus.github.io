@@ -6,60 +6,198 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-image: linear-gradient(to right bottom, #ff6f61, #e25e58, #d64d50, #c93c49, #bb2c40);
-  color: #fff;
+  background-color: #f9f9f9; /* Colore sfondo */
+  color: #333; /* Testo principale */
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 10px;
+}
+
+header {
+  background-image: url('images/header.jpg');
+  background-size: cover; /* Imposta l'immagine di sfondo per coprire l'intero elemento */
+  background-position: center; /* Centra l'immagine di sfondo */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  /*border-radius: 0 0 30px 30px;  Bordi arrotondati sopra */
+}
+
+header a {
+  color: inherit; /* Usa il colore ereditato dal genitore */
+  text-decoration: none; /* Rimuove la sottolineatura */
+}
+/*header {*/
+  /*background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.25), rgba(128, 128, 128, 0));*/
+  /*background-color: #ffa64d; Arancione */
+  /*color: #fff; Testo bianco */
+  /*padding: 20px 0;*/
+  /*text-align: center;*/
+  /*border-radius: 0 0 30px 30px;  Bordi arrotondati sopra */
+/*}*/
+
+header h1 {
+  font-size: 3.5em; /* Dimensione del testo */
+}
+
+nav {
+  background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.25), rgba(128, 128, 128, 0));
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0056b3; /* Colore link al passaggio del mouse */
+}
+
+section {
+  padding: 20px 0;
   text-align: center;
 }
 
-h1 {
-  font-size: 3rem;
+section:not(:last-child) {
+  margin-bottom: 20px; /* Aggiungi un margine inferiore */
+}
+
+section h2 {
+  font-size: 2.5em;
   margin-bottom: 20px;
+  color: #222; /* Nero */
 }
 
-p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #555; /* Grigio */
 }
 
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px;
-  background-color: #fff;
-  color: #ff6f61;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #e25e58;
-  color: #fff;
-}
-
-/* Stili per il footer */
-.footer {
-  background-color: #333;
-  color: #fff;
+footer {
+  background-color: #222; /* Arancione */
+  color: #fff; /* Testo bianco */
+  text-align: center;
   padding: 20px 0;
+  /*border-radius: 30px 30px 0 0; Bordi arrotondati sopra */
 }
 
-.footer .container {
+.music-container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap; /* Avvolgimento contenuti */
+  justify-content: center; /* Centratura orizzontale */
 }
 
+.music-wrapper {
+  flex: 0 1 calc(50% - 20px); /* Larghezza fissa del 50% meno il margine */
+  margin: 10px; /* Margine */
+  position: relative; /* Posizione relativa */
+}
+
+.music-wrapper img {
+  width: 100%; /* Occupa tutta la larghezza del contenitore */
+  height: auto; /* Altezza automatica proporzionale alla larghezza */
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Aggiunta transizione */
+}
+
+.music-wrapper img:hover {
+  transform: scale(1.05); /* Ingrandisce l'immagine del 10% al passaggio del mouse */
+}
+
+/* Stile per il contenitore dei media */
+.media-container {
+  display: flex;
+  flex-wrap: wrap; /* Avvolgimento contenuti */
+  justify-content: center; /* Centratura orizzontale */
+}
+
+/* Stile per ciascun media */
+.media-wrapper {
+  flex: 1; /* Distribuzione spazio */
+  margin: 10px; /* Margine */
+  position: relative; /* Posizione relativa */
+}
+
+/* Stile per le immagini */
+.media-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Stile per i video */
+.media-wrapper video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+
+/* Effetto hover per i video */
+.media-wrapper video:hover {
+  transform: scale(1.05);
+}
+
+/* Nascondi i controlli del video */
+.media-wrapper video::-webkit-media-controls {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Media Query per Dispositivi Mobile */
+@media only screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+  }
+}
+
+#contact {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f0f0f0; /* Colore sfondo */
+}
+
+#contact img {
+  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+  transition: transform 0.3s ease; /* Aggiunta transizione */
+}
+
+#contact img:hover {
+  transform: scale(1.1); /* Ingrandisce leggermente l'icona al passaggio del mouse */
+}
+
+/* Rimuovi i pallini dall'elenco */
 .social-links {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .social-links li {
@@ -67,12 +205,6 @@ p {
   margin-right: 10px;
 }
 
-.social-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.social-links li a:hover {
-  text-decoration: underline;
+.social-links li:last-child {
+  margin-right: 0;
 }
