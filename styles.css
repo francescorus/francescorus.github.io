@@ -166,7 +166,7 @@ footer {
   visibility: hidden;
 }
 
-/* Media Query per Dispositivi Mobile */
+/* Media Query per Dispositivi Mobile
 @media only screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -176,7 +176,7 @@ footer {
   nav ul li {
     margin-right: 0;
   }
-}
+}*/
 
 #contact {
   text-align: center;
@@ -208,3 +208,46 @@ footer {
 .social-links li:last-child {
   margin-right: 0;
 }
+
+/* CSS generale rimasto invariato */
+
+/* Media Query per Dispositivi Mobili */
+@media only screen and (max-width: 768px) {
+  /* Modifiche al menu di navigazione */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px; /* Spazio inferiore tra gli elementi del menu */
+  }
+
+  /* Stile per le sezioni */
+  section h2 {
+    font-size: 2em; /* Riduci la dimensione del titolo */
+  }
+
+  section p {
+    font-size: 1em; /* Riduci la dimensione del testo */
+    margin-bottom: 20px; /* Riduci il margine inferiore */
+  }
+
+  /* Modifiche per i video e le immagini */
+  .media-wrapper video,
+  .media-wrapper img {
+    border-radius: 5px; /* Riduci il bordo arrotondato */
+  }
+
+  /* Stile per il footer */
+  footer {
+    padding: 20px 0;
+  }
+
+  /* Stile per i link social nel footer */
+  .social-links li {
+    margin-right: 5px; /* Riduci lo spazio tra i link social */
+  }
+}
+
