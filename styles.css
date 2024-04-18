@@ -209,8 +209,6 @@ footer {
   margin-right: 0;
 }
 
-/* CSS generale rimasto invariato */
-
 /* Media Query per Dispositivi Mobili */
 @media only screen and (max-width: 768px) {
   /* Modifiche al menu di navigazione */
@@ -235,10 +233,20 @@ footer {
   }
 
   /* Modifiche per i video e le immagini */
-  .media-wrapper video,
   .media-wrapper img {
-    border-radius: 5px; /* Riduci il bordo arrotondato */
-  }
+      display: block; /* Mostra l'immagine */
+      width: 100%;
+      height: auto;
+      border-radius: 10px; /* Mantieni il bordo arrotondato */
+    }
+
+  /* Nascondi i controlli del video e disabilita l'interazione */
+    .media-wrapper video {
+      pointer-events: none; /* Disabilita l'interazione con il video */
+      user-select: none; /* Disabilita la selezione del video */
+      touch-action: none; /* Disabilita l'azione touch sul video */
+      border-radius: 5px;
+    }
 
   /* Stile per il footer */
   footer {
