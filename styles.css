@@ -8,25 +8,30 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9; /* Colore sfondo chiaro per light mode */
-  color: #333; /* Colore testo principale per light mode */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f9f9f9; /* Colore sfondo */
+  color: #333; /* Testo principale */
 }
 
-/* Modalità Scura */
+/* Modalità scura */
 body.dark-mode {
-  background-color: #121212; /* Colore sfondo scuro per dark mode */
-  color: #ffffff; /* Colore testo principale per dark mode */
+  background-color: #1a1a1a; /* Sfondo scuro */
+  color: #fff; /* Testo bianco */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 header {
   background-image: url('images/header.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Imposta l'immagine di sfondo per coprire l'intero elemento */
+  background-position: center; /* Centra l'immagine di sfondo */
   color: #fff;
   padding: 20px 0;
   text-align: center;
-  position: relative; /* Aggiunto per posizionare l'icona di toggle */
+  /*border-radius: 0 0 30px 30px;  Bordi arrotondati sopra */
 }
 
 header a {
@@ -36,21 +41,6 @@ header a {
 
 header h1 {
   font-size: 3.5em; /* Dimensione del testo */
-}
-
-/* Toggle Icon */
-.theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  font-size: 1.5em;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-body.dark-mode .theme-toggle {
-  color: #bbb; /* Colore dell'icona in dark mode */
 }
 
 nav {
@@ -70,21 +60,18 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333; /* Colore link per light mode */
+  color: #333;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-body.dark-mode nav ul li a {
-  color: #ccc; /* Colore link per dark mode */
-}
-
 nav ul li a:hover {
-  color: #0056b3; /* Colore link al passaggio del mouse per light mode */
+  color: #0056b3; /* Colore link al passaggio del mouse */
 }
 
-body.dark-mode nav ul li a:hover {
-  color: #ffcc00; /* Colore link al passaggio del mouse per dark mode */
+/* Modalità scura per i link di navigazione */
+body.dark-mode nav ul li a {
+  color: #fff; /* Colore del testo per la modalità scura */
 }
 
 section {
@@ -99,32 +86,71 @@ section:not(:last-child) {
 section h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #222; /* Colore titolo per light mode */
-}
-
-body.dark-mode section h2 {
-  color: #ddd; /* Colore titolo per dark mode */
+  color: #222; /* Nero */
 }
 
 section p {
   font-size: 1.2em;
   margin-bottom: 40px;
-  color: #555; /* Colore testo per light mode */
+  color: #555; /* Grigio */
 }
 
-body.dark-mode section p {
-  color: #ccc; /* Colore testo per dark mode */
+/* Sezione Programmazione */
+#programming {
+  background-color: #f0f0f0; /* Colore di sfondo leggero */
+  padding: 40px 0;
+}
+
+#programming h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+#programming p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.programming-container {
+  display: flex;
+  flex-wrap: wrap; /* Permette agli elementi di avvolgersi */
+  justify-content: center; /* Centra gli elementi all'interno del contenitore */
+  gap: 20px; /* Spazio tra gli elementi */
+}
+
+.programming-wrapper {
+  flex: 0 1 calc(50% - 20px); /* Ogni elemento occupa il 50% della larghezza meno il margine */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza totale */
+  margin-bottom: 20px; /* Margine verticale tra le righe */
+  text-align: center; /* Centra il testo */
+}
+
+.programming-wrapper img {
+  width: 250px; /* Larghezza fissa delle immagini */
+  height: 150px ; /* Altezza automatica proporzionale alla larghezza */
+  border-radius: 10px; /* Bordi arrotondati */
+  transition: transform 0.3s ease; /* Transizione al passaggio del mouse */
+}
+
+.programming-wrapper p {
+  margin-top: 10px; /* Spazio tra l'immagine e il testo */
+  font-size: 1.2em;
+  color: #333; /* Colore del testo */
+}
+
+/* Effetto hover sulle immagini */
+.programming-wrapper img:hover {
+  transform: scale(1.1); /* Ingrandisce l'immagine al passaggio del mouse */
 }
 
 footer {
-  background-color: #222; /* Colore sfondo footer per light mode */
-  color: #fff; /* Colore testo footer per light mode */
+  background-color: #222; /* Arancione */
+  color: #fff; /* Testo bianco */
   text-align: center;
   padding: 20px 0;
-}
-
-body.dark-mode footer {
-  background-color: #333; /* Colore sfondo footer per dark mode */
+  /*border-radius: 30px 30px 0 0; Bordi arrotondati sopra */
 }
 
 .music-container {
@@ -195,11 +221,7 @@ body.dark-mode footer {
 #contact {
   text-align: center;
   padding: 50px 0;
-  background-color: #f0f0f0; /* Colore sfondo per light mode */
-}
-
-body.dark-mode #contact {
-  background-color: #1e1e1e; /* Colore sfondo per dark mode */
+  background-color: #f0f0f0; /* Colore sfondo */
 }
 
 #contact img {
@@ -227,17 +249,8 @@ body.dark-mode #contact {
   margin-right: 0;
 }
 
-body.dark-mode .social-links a {
-  color: #ccc; /* Colore link social per dark mode */
-}
-
-body.dark-mode .social-links a:hover {
-  color: #ffcc00; /* Colore link social al passaggio del mouse per dark mode */
-}
-
 /* Media Query per Dispositivi Mobili */
 @media only screen and (max-width: 768px) {
-  /* Modifiche al menu di navigazione */
   nav ul {
     flex-direction: column;
     align-items: center;
@@ -248,7 +261,6 @@ body.dark-mode .social-links a:hover {
     margin-bottom: 10px; /* Spazio inferiore tra gli elementi del menu */
   }
 
-  /* Stile per le sezioni */
   section h2 {
     font-size: 2em; /* Riduci la dimensione del titolo */
   }
@@ -258,26 +270,19 @@ body.dark-mode .social-links a:hover {
     margin-bottom: 20px; /* Riduci il margine inferiore */
   }
 
-  /* Modifiche per i video e le immagini */
-  .media-wrapper img {
-      display: block; /* Mostra l'immagine */
-      width: 100%;
-      height: auto;
-      border-radius: 10px; /* Mantieni il bordo arrotondato */
-    }
+  /* Stile per le immagini di programmazione in modalità mobile */
+  .programming-wrapper {
+    flex: 0 1 calc(100% - 20px); /* Larghezza piena per mobile */
+  }
 
-  /* Nascondi i controlli del video e disabilita l'interazione */
-    .media-wrapper video {
-      pointer-events: none; /* Disabilita l'interazione con il video */
-      border-radius: 5px;
-    }
+  .music-wrapper {
+    flex: 0 1 calc(100% - 20px); /* Larghezza piena per mobile */
+  }
 
-  /* Stile per il footer */
   footer {
     padding: 20px 0;
   }
 
-  /* Stile per i link social nel footer */
   .social-links li {
     margin-right: 5px; /* Riduci lo spazio tra i link social */
   }
