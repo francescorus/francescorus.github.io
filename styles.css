@@ -6,22 +6,32 @@
 }
 
 .container {
-  padding-left: 50px; /* Adjust the value as needed */
-  padding-right: 50px; /* Adjust the value as needed */
+  padding-left: 100px; /* Adjust the value as needed */
+  padding-right: 100px; /* Adjust the value as needed */
   /* You can also use shorthand like: padding: 0 20px; */
+}
+
+.container-text {
+  padding-left: 300px; /* Adjust the value as needed */
+  padding-right: 300px; /* Adjust the value as needed */
+  /* You can also use shorthand like: padding: 0 20px; */
+}
+
+.title-language{
+  padding-bottom: 40px;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background-color: #f9f9f9; /* Colore sfondo chiaro per light mode */
-  color: #333; /* Colore testo principale per light mode */
+  color: #1a1a1a; /* Colore testo principale per light mode */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Modalità Scura */
 body.dark-mode {
-  background-color: #121212; /* Colore sfondo scuro per dark mode */
+  background-color: #1f1f1f; /* Colore sfondo scuro per dark mode */
   color: #ffffff; /* Colore testo principale per dark mode */
 }
 
