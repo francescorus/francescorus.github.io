@@ -251,15 +251,35 @@ body.dark-mode .social-links a:hover {
   color: #ffcc00; /* Colore link social al passaggio del mouse per dark mode */
 }
 
+.left-column {
+  display: flex;
+  flex-direction: column; /* Dispone l'immagine e il nome in colonna */
+  align-items: center; /* Centra orizzontalmente l'immagine e il nome */
+  margin-right: 20px; /* Distanza tra la colonna di sinistra e la descrizione */
+}
 
+.programming-wrapper {
+  display: flex; 
+  align-items:flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  padding: 10px;
+  position: relative;
+}
 
+.language-name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+}
 
-/*.programming-wrapper .description { */
-/*  display: none; /* Non visibile di default */
-/*  opacity: 0; */
-/*  transform: translateY(30px); /* Inizia più in basso */
-/*  transition: opacity 0.8s ease, transform 0.8s ease; *//* Animazione per opacità e movimento */
-/*}*/
+.description {
+  font-size: 1em;
+  color: #555;
+  max-width: 600px;
+  text-align: left;
+}
 
 /* Stile per le descrizioni (graduale, con effetto scroll) */
 .programming-wrapper .description {
@@ -284,18 +304,22 @@ body.dark-mode .social-links a:hover {
 
 /* Stile per le immagini dei linguaggi (effetto hover) */
 .programming-wrapper img {
+  width: 170px;
+  height: auto; 
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+#programming-wrapper-image-js {
+  width: 170px;
+  height: auto; 
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .programming-wrapper:hover img {
   transform: scale(1.1); /* Zoom al passaggio del mouse */
 }
-
-
-
-
-
-
 
 
 /* Smartphone piccoli (max-width: 480px) */
