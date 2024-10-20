@@ -12,8 +12,8 @@
 }
 
 .container-text {
-  padding-left: 300px; /* Adjust the value as needed */
-  padding-right: 300px; /* Adjust the value as needed */
+  padding-left: 250px; /* Adjust the value as needed */
+  padding-right: 250px; /* Adjust the value as needed */
   /* You can also use shorthand like: padding: 0 20px; */
 }
 
@@ -257,6 +257,12 @@ body.dark-mode .social-links a:hover {
   nav ul {
     flex-direction: column;
     align-items: center;
+  }
+
+  .container-text {
+    padding-left: 50px; /* Adjust the value as needed */
+    padding-right: 50px; /* Adjust the value as needed */
+    /* You can also use shorthand like: padding: 0 20px; */
   }
 
   nav ul li {
