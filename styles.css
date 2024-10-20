@@ -251,6 +251,23 @@ body.dark-mode .social-links a:hover {
   color: #ffcc00; /* Colore link social al passaggio del mouse per dark mode */
 }
 
+/* Smartphone piccoli (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  /* Regole specifiche per dispositivi più piccoli */
+  .container-text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Tablet (max-width: 1024px) */
+@media only screen and (max-width: 1024px) {
+  .container-text {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
 /* Media Query per Dispositivi Mobili */
 @media only screen and (max-width: 768px) {
   /* Modifiche al menu di navigazione */
@@ -260,8 +277,8 @@ body.dark-mode .social-links a:hover {
   }
 
   .container-text {
-    padding-left: 50px; /* Adjust the value as needed */
-    padding-right: 50px; /* Adjust the value as needed */
+    padding-left: 5%; /* Adjust the value as needed */
+    padding-right: 5%; /* Adjust the value as needed */
     /* You can also use shorthand like: padding: 0 20px; */
   }
 
