@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9ZT9725TS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y9ZT9725TS');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💡 Francesco Russo - Portfolio</title>
+  <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="../index.html"> <!-- Added link here -->
+        <h1>Music</h1>
+      </a>
+      <div class="theme-toggle">
+        <div class="row-theme-toggle">
+          <i class="fas fa-sun" id="theme-icon"></i>
+          <padding>
+            <a href="index.html">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </padding>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="pubblications">
+    <div class="container">
+      <!--<h2>Hello!</h2>-->
+      <h2>My creation</h2>
+
+      <p>I always love create music and sometime compose it in my limited freetime
+      </p>
+
+      <p>Work in progress ; /
+      </p>
+
+    </div>
+  </section>
+
+  </section>
+
+  </section>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me!</h2>
+      <p>Have questions or want to collaborate? Contact me! 👇</p>
+      <!--<a href="mailto:francesco.rus2002@gmail.com">
+      <img src="images/email-icon.png" alt="Email icon" width="50" height="50">
+    </a>-->
+      <h2>
+        <a href="mailto:francesco.rus2002@gmail.com">
+          📧
+        </a>
+      </h2>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Francesco Russo. All rights reserved.</p>
+      <!-- Add your contacts and social links here -->
+      <ul class="social-links">
+        <li><a href="https://github.com/francescorus" target="_blank">Github</a></li>
+        <li><a href="https://www.instagram.com/francesco_russ/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/francesco-russo-089305227/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.getElementById('theme-icon');
+      const body = document.body;
+
+      // Controlla la modalità salvata
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        themeToggle.classList.replace('fa-sun', 'fa-moon');
+      }
+
+      // Gestisci il click sull'icona
+      themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          themeToggle.classList.replace('fa-moon', 'fa-sun');
+          localStorage.setItem('dark-mode', 'disabled');
+        } else {
+          body.classList.add('dark-mode');
+          themeToggle.classList.replace('fa-sun', 'fa-moon');
+          localStorage.setItem('dark-mode', 'enabled');
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

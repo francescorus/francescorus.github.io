@@ -5,11 +5,18 @@
   box-sizing: border-box;
 }
 
+a 
+{
+	text-decoration: none; 
+	font-weight: bold;
+	color: #2e2e2e
+}
+
 .container {
   padding-left: 10%; /* Adjust the value as needed */
   padding-right: 10%; /* Adjust the value as needed */
   /* You can also use shorthand like: padding: 0 20px; */
-}
+} 
 
 .title-language{
   padding-bottom: 40px;
@@ -25,12 +32,12 @@ body {
 
 /* Modalità Scura */
 body.dark-mode {
-  background-color: #1f1f1f; /* Colore sfondo scuro per dark mode */
+  background-color: #161616; /* Colore sfondo scuro per dark mode */
   color: #ffffff; /* Colore testo principale per dark mode */
 }
 
 header {
-  background-image: url('images/header.jpg');
+  background-image: url('../images/me/header.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -38,6 +45,10 @@ header {
   text-align: center;
   position: relative; /* Aggiunto per posizionare l'icona di img
    */
+}
+
+.a_pubblication{
+  color: rgb(113, 0, 0);
 }
 
 header a {
@@ -117,6 +128,10 @@ body.dark-mode section h2 {
   color: #ddd; /* Colore titolo per dark mode */
 }
 
+body.dark-mode a {
+  color: #ddd; /* Colore titolo per dark mode */
+}
+
 section p {
   font-size: 1.2em;
   margin-bottom: 20px;
@@ -192,6 +207,61 @@ body.dark-mode footer {
   object-fit: cover;
 }
 
+#kayak_me {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 35%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+#kayak_me2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 38.48%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+#drums {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 63%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+#logic {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 20%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+#tele1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 35%;
+  height: auto;
+  border-radius:20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
 /* Effetto hover per i video */
 .media-wrapper video:hover {
   transform: scale(1.05);
@@ -251,6 +321,12 @@ body.dark-mode .social-links a:hover {
   flex-direction: column; /* Dispone l'immagine e il nome in colonna */
   align-items: center; /* Centra orizzontalmente l'immagine e il nome */
   margin-right: 20px; /* Distanza tra la colonna di sinistra e la descrizione */
+}
+
+.row-theme-toggle{
+  display: flex;
+  flex-direction: column; /* Dispone l'immagine e il nome in colonna */
+  align-items: center; /* Centra orizzontalmente l'immagine e il nome */
 }
 
 .programming-wrapper {

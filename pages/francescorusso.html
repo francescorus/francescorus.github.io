@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9ZT9725TS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y9ZT9725TS');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💡 Francesco Russo - Portfolio</title>
+  <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="../index.html"> <!-- Added link here -->
+        <h1>Who am I?</h1>
+      </a>
+      <div class="theme-toggle">
+        <div class="row-theme-toggle">
+          <i class="fas fa-sun" id="theme-icon"></i>
+          <padding>
+            <a href="index.html">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </padding>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="introduction">
+    <div class="container">
+      <!--<h2>Hello!</h2>-->
+      <h2>Who is Francesco Russo?</h2>
+
+      <p>Who am I? Perhaps the most difficult and easiest question to answer in a few lines.
+        I am a big dreamer or maybe a very optimistic person in life. I am a curious person,
+        about every aspect of things, I always like to learn new things. Starting with the basics:
+        I am a sportsman, in fact i competed in kayaking for 10 years of my life, now I am very busy
+        with university and I am devoting most of my time to study... Kayaking has given me a lot.
+        I've learnt to work hard for something that you love and i've learnt to get up when things get hard
+        and you want to stop. I grew up in an health ambience and I will never stop thanking the sport
+        for shaping me into who I've become. Everything has an end and every end is a new chapter in life.
+        However, I don't miss a chance to run or go to the gym to keep fit.
+      </p>
+      <img src="../images/me/kayak_me.jpg" id="kayak_me">
+      <img src="../images/me/kayak_me2.jpg" id="kayak_me2">
+      <p> Another thing that i must mention to sum up who i am is the fact that i'm a huge music lover,
+        i love everything about music: listening, composing, studing, playing... I studied drums from
+        the age of 10 to 13 and i learned to play piano self-taught (also thanks to my sister). I recently bought
+        a guitar and a bass and i'm exited to learn how to play them! Last year I was able to
+        buy with my own money a macbook and logic pro, a dream.
+      </p>
+      <img src="../images/me/logic.jpg" id="logic">
+      <img src="../images/me/drums.jpg" id="drums">
+      <p> Since I was young, with my first Windows XP desktop, I have had a great curiosity for the IT world. 
+        I was obsessed with knowing how a computer works. As I grew, during high school, I attended an IT 
+        institute where I developed a passion for mathematics and computer science.
+      </p>
+      <img src="../images/me/tele1.jpg" id="tele1">
+      <img src="../images/me/tele3.jpg" id="tele1">
+      <p> It led me to enroll at the University of Padua in the Computer Engineering course at the end of high school. 
+        Fortunately, throughout my education, I have never had problems with indecision about which school to choose, 
+        and university was no exception. While studying, between my first and second years at university, 
+        I also worked in a company as a back-end programmer.
+      </p>
+      <img src="../images/me/uni1.HEIC" id="tele1">
+      <img src="../images/me/uni2.HEIC" id="tele1">
+      <p> Work in progress...
+      </p>
+    </div>
+  </section>
+
+  </section>
+
+  </section>
+  <section id="contact">
+    <div class="container">
+      <h2>Get in touch!</h2>
+      <p>Have questions or want to collaborate? Contact me! 👇</p>
+      <!--<a href="mailto:francesco.rus2002@gmail.com">
+      <img src="images/email-icon.png" alt="Email icon" width="50" height="50">
+    </a>-->
+      <h2>
+        <a href="mailto:francesco.rus2002@gmail.com">
+          📧
+        </a>
+      </h2>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Francesco Russo. All rights reserved.</p>
+      <!-- Add your contacts and social links here -->
+      <ul class="social-links">
+        <li><a href="https://github.com/francescorus" target="_blank">Github</a></li>
+        <li><a href="https://www.instagram.com/francesco_russ/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/francesco-russo-089305227/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.getElementById('theme-icon');
+      const body = document.body;
+
+      // Controlla la modalità salvata
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        themeToggle.classList.replace('fa-sun', 'fa-moon');
+      }
+
+      // Gestisci il click sull'icona
+      themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          themeToggle.classList.replace('fa-moon', 'fa-sun');
+          localStorage.setItem('dark-mode', 'disabled');
+        } else {
+          body.classList.add('dark-mode');
+          themeToggle.classList.replace('fa-sun', 'fa-moon');
+          localStorage.setItem('dark-mode', 'enabled');
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
